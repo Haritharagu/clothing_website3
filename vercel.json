@@ -6,5 +6,7 @@
   "regions": ["sin1"],
   "env": {
     "NEXT_PUBLIC_SITE_URL": "https://clothingwebsite3-git-main-harithas-projects-52bb1d5a.vercel.app"
-  }
+  },
+  "name": "clothingwebsite3",
+  "alias": ["clothingwebsite3-git-main-harithas-projects-52bb1d5a.vercel.app"]
 }
