@@ -8,50 +8,83 @@
   --text-light: #FFFFFF;
 }
 
-@theme inline {
-  --color-brand-gold: var(--brand-gold);
-  --color-dark-bg: var(--dark-bg);
-  --color-dark-gray: var(--dark-gray);
-  --color-text-light: var(--text-light);
-  --font-heading: 'Inter', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-}
-
-* {
-  @apply border-border;
-}
-
 body {
-  @apply bg-dark-bg text-text-light font-body;
+  background-color: #1A1A1A;
+  color: #FFFFFF;
   font-family: 'Inter', system-ui, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply font-heading;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-brand-gold hover:bg-brand-gold/90 text-dark-bg font-medium px-6 py-3 transition-colors duration-200;
+    background-color: #D4A537;
+    color: #1A1A1A;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: rgba(212, 165, 55, 0.9);
   }
 
   .btn-secondary {
-    @apply border border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-dark-bg font-medium px-6 py-3 transition-colors duration-200;
+    border: 1px solid #D4A537;
+    color: #D4A537;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #D4A537;
+    color: #1A1A1A;
   }
 
   .input-field {
-    @apply bg-dark-gray border border-dark-gray text-text-light placeholder-dark-gray/50 focus:border-brand-gold focus:outline-none transition-colors duration-200;
+    background-color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+  }
+
+  .input-field::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .input-field:focus {
+    outline: none;
+    border-color: #D4A537;
   }
 
   .product-card {
-    @apply bg-dark-bg border border-dark-gray hover:border-brand-gold transition-colors duration-200;
+    background-color: #1A1A1A;
+    border: 1px solid #4A4A4A;
+    transition: all 0.2s ease;
+  }
+
+  .product-card:hover {
+    border-color: #D4A537;
   }
 
   .filter-button {
-    @apply bg-dark-gray border border-dark-gray text-text-light hover:border-brand-gold hover:text-brand-gold transition-colors duration-200;
+    background-color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    color: #FFFFFF;
+    transition: all 0.2s ease;
+  }
+
+  .filter-button:hover {
+    border-color: #D4A537;
+    color: #D4A537;
   }
 
   .filter-button.active {
-    @apply bg-brand-gold text-dark-bg border-brand-gold;
+    background-color: #D4A537;
+    color: #1A1A1A;
+    border-color: #D4A537;
   }
 }
